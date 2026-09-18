@@ -1,7 +1,10 @@
 # ふたBGM（Android）配布置き場
 
-APKを置くだけのリポジトリ。**中身のコードは別**（`C:\dev\Private\Application\FutaBGM`）。
+アプリの更新を配るためだけのリポジトリ。**置いてあるのはAPKだけで、ソースコードは入っていない。**
 
 - アプリの「設定 ＞ 最新版を確認」がここの最新リリースを見に来る
-- 🔥 公開は必ず `android\scriptselease.ps1` を通す（手で `gh release create` を叩かない）。
+- 🔴 **public にしないとアプリから見えない。** アプリは認証なしでGitHub APIを叩くので、private のままだと
+  404 になり「更新の置き場がまだありません」から先に進めない（2026-09-18 に実際に踏んだ）。
+  ふたメールの配布置き場（`futamail-android-releases`）も同じ理由で public にしてある
+- 🔥 公開は必ず `scripts/release.ps1` を通す（手で `gh release create` を叩かない）。
   タグとAPKの中の版が一致するかを機械的に確かめてから上げるため
